@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+           
+            width: 0;  
+            height: 0;  
+            border-left: 50px solid transparent; 
+            border-right: 50px solid transparent; 
+              
+            border-bottom: 50px solid green; 
+  
+            margin: 2rem; 
+            
+        }
+        div:nth-child(1){
+            position:relative;
+            top: 280px;
+            animation: left 10s ease infinite forwards;
+        }
+        div:nth-child(2){
+            position:relative;
+            top:200px;
+            right:0;
+            left:90%;
+            animation: right 10s ease infinite forwards;
+        }
+        @keyframes left{
+            0%{}
+            20%{
+                transform: rotateZ(90deg);
+            }
+            40%{
+                transform: translateX(600px) rotateZ(90deg);
+            }
+            60%{
+                transform: translateX(600px) rotateZ(-90deg);
+
+            }
+            80%{
+                transform: translatex(0) rotateZ(-90deg);
+            }
+            100%{
+                transform: rotateZ(0deg);
+            }
+
+        }
+        @keyframes right{
+            0%{}
+            20%{
+                transform: rotateZ(-90deg);
+            }
+            40%{
+                transform: translateX(-600px) rotateZ(-90deg);
+            }
+            60%{
+                transform: translateX(-600px) rotateZ(90deg);
+
+            }
+            80%{
+                transform: translatex(0) rotateZ(90deg);
+            }
+            100%{
+                transform: rotateZ(0deg);
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+</body>
+</html>
